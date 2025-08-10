@@ -1,9 +1,14 @@
 from stats import get_book_text, word_counter, character_counter
 import sys
 
+# output.py
+
+# Function to sort character counts by value in descending order
+
 def sort_by_value(character_count):
     return sorted(character_count.items(), key=lambda item: item[1], reverse=True)
     
+# Main output function that processes the book text and prints the results
 
 def output(get_book_text, word_counter, character_counter):
     if len(sys.argv) < 2:

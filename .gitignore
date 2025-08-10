@@ -1,3 +1,5 @@
 # Ignore all Books
 /books
-_pycache_
+# Ignore pycache directories
+**/__pycache__
+**/__pycache__/
