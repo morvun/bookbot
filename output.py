@@ -1,11 +1,15 @@
 from stats import get_book_text, word_counter, character_counter
+import sys
 
 def sort_by_value(character_count):
     return sorted(character_count.items(), key=lambda item: item[1], reverse=True)
     
 
 def output(get_book_text, word_counter, character_counter):
-    book_path = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    book_path = sys.argv[1] 
     book_text = get_book_text(book_path)
     word_count = word_counter(book_text)
     character_count = character_counter(book_text)
